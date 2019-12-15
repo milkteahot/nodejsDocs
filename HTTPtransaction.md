@@ -167,3 +167,4 @@ http.createServer((request, response)=>{
 * request 객체에서 response 객체로 데이터를 파이프로 연결할 수 있습니다.
 * request와 response 스트림 모두에서 스트림 오류를 처리할 수 있습니다.
 
++ 출처: https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction/
