@@ -22,7 +22,7 @@ server.on('request', function(req,res){
 
     var filename = './cat1.jpg';
     fs.readFile(filename, function(err, data){
-        res.writeHead(200, {"Content-Type":"image/jpg", "width":"200px"});
+        res.writeHead(200, {"Content-Type":"image/jpg"});
         res.write(data);
         res.end();
     });
