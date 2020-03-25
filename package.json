@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "name": "nodejsdocs",
+  "description": "1. Nonblocking 2. HTTPtransaction 3. Modules",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milkteahot/nodejsDocs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milkteahot/nodejsDocs/issues"
+  },
+  "homepage": "https://github.com/milkteahot/nodejsDocs#readme"
+}
