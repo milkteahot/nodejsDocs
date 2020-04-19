@@ -20,8 +20,10 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-        var socket = io.connect();
-        socket.on('reserver', function(data){
+        var socket = io.connect(); //소켓버서 접속
+        socket.on('reserver', function(data){ //클라이언트 소켓에 'reserver' 이벤트 설정
+
+            //서버에서 전달된 좌표에 해당하는 seat의 스타일을 'disable'로 변경
             var $target = $('div[data-x = ' + data.x + '][data-y = ' + data.y + ']');
             $target.removeClass('enable');
             $target.addClass('disable');
@@ -33,7 +35,8 @@
             var y = $(this).attr('data-y');
 
             if(confirm('구입되었습니다:)')) {
-                $(this).off('click');
+                $(this).off('click'); //click 이벤트 제거
+                //소켓서버의 'reserve' 이벤트를 호출하면서 선택한 좌석좌표 전송
                 socket.emit('reserve', {
                     x:x,
                     y:y
@@ -43,8 +46,10 @@
             }
         };
 
+        //웹서버에 현시점 좌석예약현황 정보 요청
         $.getJSON('/seats', {dummy: new Date().getTime()}, function(data){
 
+            //data 파라미터에 저장된 좌석정보를 y,x축으로 each()문을 돌려서 스타일 적용
             $.each(data, function(indexY, line){
                 var $line = $('<div></div>').addClass('line');
                 $.each(line, function(indexX, seat){
