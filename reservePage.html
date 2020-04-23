@@ -20,7 +20,7 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-        var socket = io.connect(); //소켓버서 접속
+        var socket = io.connect(); //소켓서버 접속
         socket.on('reserver', function(data){ //클라이언트 소켓에 'reserver' 이벤트 설정
 
             //서버에서 전달된 좌표에 해당하는 seat의 스타일을 'disable'로 변경
