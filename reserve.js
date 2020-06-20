@@ -17,7 +17,7 @@ var fs = require('fs');
 //     [1,1,1,1,1,1,1,1,1,1],
 // ];
 var seatRow = 6;
-var seatCol = 6;
+// var seatCol = 6;
 var row = new Array(seatRow);
 for(var i=0;i<row.length;i++){
     row[i] = new Array(seatRow);
