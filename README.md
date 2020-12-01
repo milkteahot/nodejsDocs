@@ -20,3 +20,15 @@
 + 요청과 응답 이해하기
 + 쿠키와 세션 이해하기
 + REST API와 라우팅
+
+
+# 생활코딩
+1. Javascript 기본문법 & Node.js 주요 기능 & 웹앱
+- 동적인 웹페이지 만들기: main.js
+    - Not Found 구현
+    - 본문 구현
+    - 글목록 출력
+- 파일 읽기: fileread.js
+- 디렉토리 읽기: readdir.js
+- 동기와 비동기: sync.js
+- 콜백
