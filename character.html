@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character</title>
+    <style>
+        body {
+            justify-items: center;
+            align-items: center;
+            display: grid;
+            margin: 0;
+            padding: 0;
+        }
+        .img__container {
+            border: 2px solid grey;
+            width: 50vw;
+            height: 50vw;
+            margin: 1rem;
+        }
+        .img__list {
+            border: 2px solid grey;
+        }
+        .img__ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        .img__li {
+            border: 1px solid grey;
+            border-radius: 4px;
+            width: 30vw;
+            height: 30vw;
+            margin: 5px;
+            position: relative;
+        }
+        .img__head {
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            background-size: contain;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            position: absolute;
+            border-radius: 4px;
+        }
+    </style>
+     <script>
+        function draw(){
+            var canvas = document.getElementById('canvas')
+            var ctx = canvas.getContext('2d');
+
+            //draw slice
+            ctx.drawImage(document.getElementById('source'),
+            85,40,100,75);
+            
+            //draw frame
+            ctx.drawImage(document.getElementById('frame'), 30, 0, 240,270);
+        }
+    </script>
+</head>
+<body onload="draw();">
+    <div class="img__container">
+        <canvas id="canvas" width="300" height="300">
+            
+        </canvas>
+        <div style="display:none;">
+            <!-- <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+            <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"> -->
+            <img id="source" src="https://lh3.googleusercontent.com/proxy/phYtBdq2nAR4zFdj5PgMnf-rXRmfgqrY-pNHcr60sGkadEPDxNHNbF0vXisHFsFH9p2WZNS1SLM1BwiQYcEe-C9BBOScQc8X3E9z2cTER337R0ht_EBBeRX60RXvdrZ2tE_Hfw" width="300" height="227">
+            <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+          </div>
+    </div>
+    <div class="img__list">
+        <ul class="img__ul">
+            <li class="img__li">
+                <div id="source" class="img__head" style="background-image: url('https://lh3.googleusercontent.com/proxy/phYtBdq2nAR4zFdj5PgMnf-rXRmfgqrY-pNHcr60sGkadEPDxNHNbF0vXisHFsFH9p2WZNS1SLM1BwiQYcEe-C9BBOScQc8X3E9z2cTER337R0ht_EBBeRX60RXvdrZ2tE_Hfw');" alt="img__head">
+            </li>
+            <li class="img__li">
+                <div class="img__head" style="background-image: url('https://lh3.googleusercontent.com/proxy/phYtBdq2nAR4zFdj5PgMnf-rXRmfgqrY-pNHcr60sGkadEPDxNHNbF0vXisHFsFH9p2WZNS1SLM1BwiQYcEe-C9BBOScQc8X3E9z2cTER337R0ht_EBBeRX60RXvdrZ2tE_Hfw');" alt="img__head">
+            </li>
+            <li class="img__li">
+                <div id="frame" class="img__head" style="background-image: url('https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png');" alt="img__head">
+            </li>
+        </ul>
+    </div>
+   
+</body>
+</html>
