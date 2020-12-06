@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 AI</title>
+  </head>
+  <body>
+    <form
+      method="post"
+      action="https://master-ainized-detectron2-gkswjdzz.endpoint.ainize.ai/pandopticsegmentation"
+      enctype="multipart/form-data"
+    >
+      <div>file: <input type="file" name="file" accept="image/*" /></div>
+      <br />
+      <input type="submit" />
+    </form>
+    <br />
+    <form
+      method="post"
+      action="https://master-ainized-detectron2-gkswjdzz.endpoint.ainize.ai/pandopticsegmentation"
+      enctype="multipart/form-data"
+    >
+      <img
+        id="preview"
+        src=""
+        width="700"
+        alt="로컬에 있는 이미지가 보여지는 영역"
+      />
+      <input type="file" id="getfile" accept="image/*" />
+    </form>
+    <script>
+      var file = document.querySelector("#getfile");
+
+      file.onchange = function () {
+        var fileList = file.files;
+
+        // 읽기
+        var reader = new FileReader();
+        reader.readAsDataURL(fileList[0]);
+
+        //로드 한 후
+        reader.onload = function () {
+          document.querySelector("#preview").src = reader.result;
+        };
+      };
+    </script>
+  </body>
+</html>
