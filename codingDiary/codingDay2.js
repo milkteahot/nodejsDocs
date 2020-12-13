@@ -6,3 +6,7 @@ let me = {
 }
 
 me.run(30);
+
+for (const key in me) {
+    console.log(key+ ':' + me[key]);
+}
