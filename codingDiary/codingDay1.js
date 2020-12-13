@@ -1,4 +1,5 @@
 const fs = require('fs');
+var test = __dirname('')
 const printDay = require('./printDay');
 
 //오늘의 기록
